@@ -60,15 +60,15 @@ const roleElement = document.getElementsByClassName("role");
 const imageElement = document.getElementsByClassName("card-img");
 // console.log(image);
 
-const new_img = document.createElement('img');
 
 
 
 // Inserisco i nomi del team nella DOM
 for (let i = 0; i < team.length; i++) {
-  const addName = firstName[i].append(team[i].name);
-  const addRole = roleElement[i].append(team[i].role);
-  const place_image = './img/' + team[i].image;
+    const addName = firstName[i].append(team[i].name);
+    const addRole = roleElement[i].append(team[i].role);
+    const place_image = './img/' + team[i].image;
+    const new_img = document.createElement('img');
   console.log(place_image)
 
   new_img.src = place_image;
