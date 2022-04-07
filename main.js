@@ -43,11 +43,37 @@ const team = [
   },
 ];
 
+//ciclo per stampare i dati
+/* for (let i = 0; i < team.length; i++) {
+  console.log(team[i].name);
+  console.log(team[i].role);
+  console.log(team[i].image);
+} */
 
-//ciclo per stampare i dati 
-for(let i = 0; i < 6; i++){
-    console.log(team[i].name);
-    console.log(team[i].role);
-    console.log(team[i].image)
+//richiamo gli elementi del DOM e li racchiudo nelle variabili
+const firstName = document.getElementsByClassName("name");
+// console.log(firstName);
 
+const roleElement = document.getElementsByClassName("role");
+// console.log(role);
+
+const imageElement = document.getElementsByClassName("card-img");
+// console.log(image);
+
+const new_img = document.createElement('img');
+
+
+
+// Inserisco i nomi del team nella DOM
+for (let i = 0; i < team.length; i++) {
+  const addName = firstName[i].append(team[i].name);
+  const addRole = roleElement[i].append(team[i].role);
+  const place_image = './img/' + team[i].image;
+  console.log(place_image)
+
+  new_img.src = place_image;
+    // console.log(new_img)
+  imageElement[i].appendChild(new_img)
+  
+  
 }
